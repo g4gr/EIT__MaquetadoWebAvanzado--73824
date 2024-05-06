@@ -1,0 +1,43 @@
+@charset 'UTF-8';
+
+/* Debug */
+* {
+  border: 1px dotted blue;
+}
+
+/* Comienzo Header */
+.Header {
+}
+
+.Header .navbar {
+  & div {
+    & .navbar__logo {}
+
+    & .navbar__menu {
+      & .navbar__menu--item {
+      }
+    }
+
+    & .navbar__buttons {}
+  }
+}
+
+}
+
+.Header .navbar div .navbar__menu .navbar__menu--item {
+}
+
+.Header .navbar div .navbar__buttons {
+}
+
+/* Comienzo Aside */
+.Aside {
+}
+
+/* Comienzo Main */
+.Main {
+}
+
+/* Comienzo Footer */
+.Footer {
+}
