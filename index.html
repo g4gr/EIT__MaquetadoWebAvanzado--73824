@@ -6,41 +6,63 @@
 
     <title>Hola que tal !</title>
 
+    <!-- Fuentes externas -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body class="Body">
     <!-- Comienzo Header -->
     <header class="Header">
       <nav class="navbar">
-        <div>
-          <figure class="navbar__logo">
-            <img src="./assets/i_logo.svg" alt="" />
-            <figcaption>PostJob</figcaption>
-          </figure>
-          <ul class="navbar__menu">
-            <li class="navbar__menu--item">AI Cover Letter Generator</li>
-            <li class="navbar__menu--item">Resume Template</li>
-            <li class="navbar__menu--item">Pricing</li>
-          </ul>
-        </div>
+        <figure class="navbar__logo" width="150px" height="50px">
+          <img
+            src="./assets/i_logo.svg"
+            alt="Logo de PostJob"
+            width="32px"
+            height="32px"
+          />
+          <figcaption>PostJob</figcaption>
+        </figure>
+        <menu class="navbar__menu">
+          <li class="navbar__menu--item">
+            <a href="#">AI Cover Letter Generator</a>
+          </li>
+          <li class="navbar__menu--item"><a href="#">Resume Template</a></li>
+          <li class="navbar__menu--item"><a href="#">Pricing</a></li>
+        </menu>
         <div class="navbar__buttons">
-          <button>Sign In</button>
-          <button>Get Started</button>
+          <button class="btn" id="js_btnSignIn">Sign In</button>
+          <button class="btn btn--primary" id="js_btnGetStarted">
+            Get Started
+          </button>
         </div>
       </nav>
       <div class="hero">
-        <h1>
-          <span>Win your dream job</span>
-          <span>with PostJob</span>
-        </h1>
-        <h4i id="colorGaby" >
-          Submit better job app - 10Xx faster. AI cover letter generator, resume
-          keyword checker, outreach message writer, and more. Power by GPT.
-        </h4>
-        <form action="">
-          <input type="text" />
-          <label for=""></label>
-        </form>
+        <div class="content">
+          <h1>
+            <span>Win your dream job</span>
+            <span>with PostJob</span>
+          </h1>
+          <p>
+            Submit better job app - 10Xx faster. AI cover letter generator,
+            resume keyword checker, outreach message writer, and more. Power by
+            GPT.
+          </p>
+          <form action="">
+            <input type="text" />
+            <label for=""></label>
+          </form>
+        </div>
         <div>
           <div class="card">
             <figure class="card__img">
