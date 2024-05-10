@@ -26,10 +26,9 @@
 }
 
 html {
-  font-size: clamp(var(--f_fontSize), var(--f_fontSize) + 1.5vw, 25px);
+  font-size : clamp( 100% , .75rem + 1.5vw , 25px )
+  /* font-size: clamp(var(--f_fontSize), var(--f_fontSize) + 1.5vw, 25px); */
   font-family: var(--f_fontFamily);
-
-  background-color: var(--c_grey900);
 }
 
 /* Elementos base */
@@ -73,8 +72,22 @@ button {
   color: var(--c_black);
 }
 
+/* Comienzo Body - Grilla */
+.Body {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-rows: 90vh 100vh 75vh 100vh 50vh 75vh;
+  grid-template-columns: repeat(12, 1fr);
+  grid-gap: 0;
+
+  /*background-color: var(--c_grey900);*/
+}
+
 /* Comienzo Header */
 .Header {
+  grid-row: 1 / 2;
+  grid-column: 1 /13;
 }
 
 .Header .navbar {
@@ -123,12 +136,66 @@ button {
 
 /* Comienzo Aside */
 .Aside {
+  grid-row: 2 / 6;
+  grid-column: 1 / 4;
+
+  background-color: aqua;
 }
 
 /* Comienzo Main */
 .Main {
+  grid-row: 2 / 6;
+  grid-column: 4 / 13;
+
+  background-color: pink;
+}
+
+.Main .section {
+  display: flex;
 }
 
 /* Comienzo Footer */
 .Footer {
+  grid-row: 6 / 7;
+  grid-column: 1 / 13;
+}
+
+/* Google Analitycs -->Breakpoint = Laptop : 1080px | Tablet : 780px | Mobile : 480px */
+@media screen and (min-width: 1080px) and (max-width: 1400px) {
+  .Body {
+    background-color: red;
+  }
+}
+
+@media screen and (min-width: 780px) and (max-width: 1080px) {
+  .Body {
+    grid-template-columns: repeat(8, 1fr);
+    background-color: green;
+  }
+  .Aside {
+    grid-row: 2 / 3;
+    grid-column: 1 / 9;
+  }
+  .Main {
+    grid-row: 3 / 6;
+    grid-column: 1 / 9;
+  }
+  .Footer {
+    grid-row: 6 / 7;
+    grid-column: 1 / 9;
+  }
+}
+
+@media screen and (min-width: 480px) and (max-width: 780px) {
+  .Body {
+    grid-template-columns: repeat(6, 1fr);
+    background-color: yellow;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .Body {
+    grid-template-columns: repeat(4, 1fr);
+    background-color: blue;
+  }
 }
