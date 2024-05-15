@@ -58,6 +58,15 @@ a {
   color : inherit;
 }
 
+img {
+  max-width: 100% ;
+  max-inline-size : 100% ;
+  block-size : auto ;
+  height: auto ;
+  object-fit: cover;
+  object-position: 50% 50%;
+}
+
 button {
   all: unset;
 }
