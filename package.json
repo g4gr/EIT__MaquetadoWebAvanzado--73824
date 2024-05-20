@@ -4,7 +4,8 @@
   "description": "Este es un proyecto de la comision # 73824 de EduIT & Fund. Pescar",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass --watch ./styles/styles.sass ./styles.css"
   },
   "author": "gaby gonzalez romero <gabygonzalezromero@gmail.com>",
   "license": "ISC",
