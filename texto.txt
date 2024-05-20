@@ -1,0 +1,57 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://www.pescar.org.ar/",
+      "url": "https://www.pescar.org.ar/",
+      "name": "Home - Fundación Pescar",
+      "isPartOf": {
+        "@id": "https://www.pescar.org.ar/#website"
+      },
+      "datePublished": "2021-05-07T18:01:17+00:00",
+      "dateModified": "2024-04-16T11:15:19+00:00",
+      "breadcrumb": {
+        "@id": "https://www.pescar.org.ar/#breadcrumb"
+      },
+      "inLanguage": "en-US",
+      "potentialAction": [
+        {
+          "@type": "ReadAction",
+          "target": [
+            "https://www.pescar.org.ar/"
+          ]
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.pescar.org.ar/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home"
+        }
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.pescar.org.ar/#website",
+      "url": "https://www.pescar.org.ar/",
+      "name": "Fundación Pescar",
+      "description": "",
+      "potentialAction": [
+        {
+          "@type": "SearchAction",
+          "target": {
+            "@type": "EntryPoint",
+            "urlTemplate": "https://www.pescar.org.ar/?s={search_term_string}"
+          },
+          "query-input": "required name=search_term_string"
+        }
+      ],
+      "inLanguage": "en-US"
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "name": "eit__maquetadowebavanzado--73824",
+  "version": "1.0.0",
+  "description": "Este es un proyecto de la comision # 73824 de EduIT & Fund. Pescar",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "gaby gonzalez romero <gabygonzalezromero@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "node-sass": "^9.0.0"
+  }
+}
