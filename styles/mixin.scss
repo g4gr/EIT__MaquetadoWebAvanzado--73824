@@ -1,0 +1,20 @@
+//- Creacion de Mixins
+//- Flexbox
+
+@mixin Flexbox(
+  $display: flex,
+  $flexFlow: wrap,
+  $AlignItems: center,
+  $JustifyContent: center,
+  $Gap: 0
+) {
+  display: $display;
+  flex-flow: $flexFlow;
+  align-items: $AlignItems;
+  justify-content: $JustifyContent;
+  @if $Gap {
+    gap: $Gap;
+  }
+}
+
+// @mixin Flexbox { flex , column nowrap , center , center , 1rem }

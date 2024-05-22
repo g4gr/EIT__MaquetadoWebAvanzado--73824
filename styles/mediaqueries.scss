@@ -1,0 +1,51 @@
+@use "./breakpoints.sass" as BQ;
+@use "./grid.scss" as G;
+
+//- Configuracion de media queries
+//
+
+/* Google Analitycs -->Breakpoint = Laptop : 1080px | Tablet : 780px | Mobile : 480px */
+@media screen and (min-width: 1080px) and (max-width: 1400px) {
+  .Body {
+  }
+}
+
+@media screen and (min-width: 780px) and (max-width: 1080px) {
+  .Body {
+    grid-template-columns: repeat(8, 1fr);
+
+    padding: 0 1.5rem;
+  }
+  .Main {
+    grid-row: G.$Grid_Main_Row_BQ--Tablet;
+    grid-column: G.$Grid_Main_Column_BQ--Tablet;
+  }
+  .Footer {
+    grid-row: G.$Grid_Footer_Row_BQ--Tablet;
+    grid-column: G.$Grid_Footer_Column_BQ--Tablet;
+  }
+}
+
+@media screen and (min-width: 480px) and (max-width: 780px) {
+  .Body {
+    grid-template-columns: repeat(6, 1fr);
+
+    padding: 0 1rem;
+  }
+  .Main {
+    grid-row: G.$Grid_Main_Row_BQ--Mobile;
+    grid-column: G.$Grid_Main_Column_BQ--Mobile;
+  }
+  .Footer {
+    grid-row: G.$Grid_Footer_Row_BQ--Mobile;
+    grid-column: G.$Grid_Footer_Column_BQ--Mobile;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .Body {
+    grid-template-columns: repeat(4, 1fr);
+
+    padding: 0 0.5rem;
+  }
+}

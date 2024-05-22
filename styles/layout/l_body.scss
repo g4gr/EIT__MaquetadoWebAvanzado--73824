@@ -1,0 +1,16 @@
+@use "../breakpoints.sass" as BQ;
+@use "../grid.scss" as G;
+
+.Body {
+  max-width: BQ.$Max-width;
+
+  margin: 0 auto;
+  padding: 0 3rem;
+
+  display: grid;
+  grid-template-rows: G.$Grid_template_rows;
+  grid-template-columns: G.$Grid_template_columns;
+  grid-gap: 0;
+
+  background-color: var(--c_grey900);
+}

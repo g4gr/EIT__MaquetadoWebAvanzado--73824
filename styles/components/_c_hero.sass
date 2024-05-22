@@ -1,0 +1,29 @@
+@use '../mixin.scss' as MX
+/* Comienzo Hero */
+
+.hero 
+  height: 90vh
+
+  @include MX.Flexbox( flex , column nowrap , center , space-evenly , 0 )
+
+  & .content 
+    text-align: center
+    color: var(--c_white)
+
+    & .content__title 
+      @include MX.Flexbox( flex, column nowrap )
+
+      font-size: 5.5rem
+
+      & span:first-child
+        color : var( --c_green400 )
+
+      & span:last-child
+        color : var( --c_white ) 
+
+
+    & .content__description 
+      display : inline-flex
+      margin : 1.5rem 
+
+      color : var( --c_grey400 )

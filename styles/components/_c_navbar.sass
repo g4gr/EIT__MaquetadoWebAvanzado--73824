@@ -1,0 +1,45 @@
+@use '../mixin.scss' as MX
+
+/* Comienzo Navbar */
+
+.navbar 
+  height: 128px
+
+  container: navbar / inline-size
+
+  @include MX.Flexbox(flex, row wrap, center, space-between)
+
+  & .navbar__logo 
+    display: inline-flex
+    align-items: center
+    gap: 0.5rem
+
+    container: navbar__logo / inline-size
+
+    color: var(--c_white)
+
+  & .navbar__menu 
+    display: flex
+    gap: 1rem
+
+    color: var(--c_grey400)
+
+    & .navbar__menu--item 
+      list-style-type: none
+
+      & .navbar__menu--item--link 
+        text-decoration: none
+
+
+@container navbar ( max-width: 768px ) 
+  .Header .navbar 
+    & .navbar__menu 
+      & .navbar__menu--item 
+        & .navbar__menu--item--link 
+          color: red
+
+
+@container navbar__logo ( max-width: 768px ) 
+  .navbar__logo 
+    & img 
+      scale: 1

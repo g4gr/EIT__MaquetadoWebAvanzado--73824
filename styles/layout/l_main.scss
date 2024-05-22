@@ -1,0 +1,61 @@
+@use "../mixin.scss" as MX;
+@use "../grid.scss" as G;
+
+//- Mixins locales
+
+/* Comienzo Main */
+.Main {
+  grid-row: G.$Grid_Main_Row;
+  grid-column: G.$Grid_Main_Column;
+
+  & .section:first-child {
+    min-height: 90vh;
+
+    background-color: var(--c_green400);
+
+    & .article {
+      height: 100%;
+
+      @include MX.Flexbox(flex, column nowrap, center, space-between);
+    }
+  }
+  & .section:nth-child(2) {
+    min-height: 75vh;
+
+    & .article {
+      height: 100%;
+
+      @include MX.Flexbox(flex, column nowrap, center, space-between);
+    }
+  }
+  & .section:nth-child(3) {
+    background-color: var(--c_green400);
+
+    & .article {
+      @include MX.Flexbox(flex, column nowrap, center, space-around);
+    }
+  }
+  & .section:nth-child(4) {
+    background-color: var(--c_green400);
+
+    & .article {
+      @include MX.Flexbox(flex, column nowrap, center, space-around);
+    }
+  }
+  & .section:last-child {
+    min-height: 60vh;
+
+    & .article {
+      height: 100%;
+
+      @include MX.Flexbox(flex, column nowrap, center, space-around);
+
+      & .title {
+        color: var(--c_white);
+      }
+      & .description {
+        color: var(--c_grey400);
+      }
+    }
+  }
+}

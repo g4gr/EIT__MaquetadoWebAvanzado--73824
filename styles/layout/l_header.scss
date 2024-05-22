@@ -1,0 +1,11 @@
+@use "../mixin.scss" as MX;
+@use "../grid.scss" as G;
+
+/* Comienzo Header */
+.Header {
+  grid-row: G.$Grid_Header_Row;
+  grid-column: G.$Grid_Header_Column;
+
+  @import "../components/_c_navbar.sass";
+  @import "../components/_c_hero.sass";
+}

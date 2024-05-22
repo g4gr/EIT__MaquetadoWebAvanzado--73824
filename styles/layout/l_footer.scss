@@ -1,0 +1,65 @@
+@use "../mixin.scss" as MX;
+@use "../grid.scss" as G;
+
+/* Comienzo Footer */
+.Footer {
+  height: 100%;
+  grid-row: G.$Grid_Footer_Row;
+  grid-column: G.$Grid_Footer_Column;
+
+  background-color: var(--c_green400);
+  text-align: center;
+}
+
+.Footer .section {
+  height: inherit;
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+
+  & .article:first-child {
+    grid-row: 1 / 2;
+    grid-column: 2 / 4;
+  }
+
+  & .article:nth-child(2) {
+    grid-row: 2 / 3;
+    grid-column: 1 / 5;
+
+    @include MX.Flexbox(flex, row wrap, top, space-between);
+
+    & .menu {
+      @include MX.Flexbox(flex, column wrap, center, space-between, 0);
+
+      & .menu__item {
+        display: inline-flex;
+        flex-flow: column nowrap;
+
+        & .menu__item--link {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+  & .article:last-child {
+    grid-row: 3 / 4;
+    grid-column: 1 / 5;
+
+    @include MX.Flexbox(flex, column wrap, center, center);
+
+    & .menu {
+      display: inline-flex;
+      gap: 1rem;
+
+      & .menu__item {
+        list-style-type: none;
+
+        & .menu__item--link {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}

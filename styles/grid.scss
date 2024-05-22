@@ -1,0 +1,75 @@
+@use "sass:string";
+
+@use "./breakpoints.sass" as BQ;
+
+//- Configuracion de la grilla
+//
+
+$Grid_rows: 3;
+$Grid_row--Header: 90vh;
+$Grid_row--Main: auto;
+$Grid_row--Footer: 75vh;
+
+$Grid_columns: 12;
+$Grid_column: 1fr;
+
+$Grid_template_rows: $Grid_row--Header $Grid_row--Main $Grid_row--Footer;
+$Grid_template_columns: repeat($Grid_columns, $Grid_column);
+
+//--------------------------
+//- Configuracion del Header
+//--------------------------
+$Grid_Header_Column--start: string.unquote("1");
+$Grid_Header_Column--end: string.unquote("13");
+$Grid_Header_Row--start: string.unquote("1");
+$grid_Header_Row--end: string.unquote("2");
+
+//- Grilla Laptop
+$Grid_Header_Column: $Grid_Header_Column--start / $Grid_Header_Column--end;
+$Grid_Header_Row: $Grid_Header_Row--start / $grid_Header_Row--end;
+
+//- Media queries
+// - Configuracion Tablet ( 8 columnas )
+$Grid_Header_Column_BQ--Tablet: string.unquote("1 / 9");
+$Grid_Header_Row_BQ--Tablet: string.unquote("1 / 2");
+// - Configuracion Mobile ( 4 columnas )
+$Grid_Header_Column_BQ--Mobile: string.unquote("1 / 5");
+$Grid_Header_Row_BQ--Mobile: string.unquote("1 / 2");
+
+//--------------------------
+//- Configuracion del Main
+//--------------------------
+$Grid_Main_Column--start: string.unquote("1");
+$Grid_Main_Column--end: string.unquote("13");
+$Grid_Main_Row--start: string.unquote("2");
+$Grid_Main_Row--end: string.unquote("3");
+
+$Grid_Main_Column: $Grid_Main_Column--start / $Grid_Main_Column--end;
+$Grid_Main_Row: $Grid_Main_Row--start / $Grid_Main_Row--end;
+
+//- Media queries
+// - Configuracion Tablet ( 8 columnas )
+$Grid_Main_Column_BQ--Tablet: string.unquote("1 / 9");
+$Grid_Main_Row_BQ--Tablet: string.unquote("2 / 3");
+// - Configuracion Mobile ( 4 columnas )
+$Grid_Main_Column_BQ--Mobile: string.unquote("1 / 5");
+$Grid_Main_Row_BQ--Mobile: string.unquote("2 / 3");
+
+//--------------------------
+//- Configuracion del Footer
+//--------------------------
+$Grid_Footer_Column--start: string.unquote("1");
+$Grid_Footer_Column--end: string.unquote("13");
+$Grid_Footer_Row--start: string.unquote("3");
+$Grid_Footer_Row--end: string.unquote("4");
+
+$Grid_Footer_Column: $Grid_Footer_Column--start / $Grid_Footer_Column--end;
+$Grid_Footer_Row: $Grid_Footer_Row--start / $Grid_Footer_Row--end;
+
+//- Media queries
+// - Configuracion Tablet ( 8 columnas )
+$Grid_Footer_Column_BQ--Tablet: string.unquote("1 / 9");
+$Grid_Footer_Row_BQ--Tablet: string.unquote("3 / 4");
+// - Configuracion Mobile ( 4 columnas )
+$Grid_Footer_Column_BQ--Mobile: string.unquote("1 / 5");
+$Grid_Footer_Row_BQ--Mobile: string.unquote("3 / 4");
