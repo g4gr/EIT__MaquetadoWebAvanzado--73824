@@ -8,53 +8,68 @@
   grid-row: G.$Grid_Main_Row;
   grid-column: G.$Grid_Main_Column;
 
-  & .section:first-child {
-    min-height: 90vh;
+  & .section {
+    display: grid;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
-    background-color: var(--c_green400);
+    &:first-child {
+      height: 90vh;
 
-    & .article {
-      height: 100%;
+      background-color: var(--c_green400);
 
-      @include MX.Flexbox(flex, column nowrap, center, space-between);
-    }
-  }
-  & .section:nth-child(2) {
-    min-height: 75vh;
+      & .article {
+        height: 100%;
 
-    & .article {
-      height: 100%;
-
-      @include MX.Flexbox(flex, column nowrap, center, space-between);
-    }
-  }
-  & .section:nth-child(3) {
-    background-color: var(--c_green400);
-
-    & .article {
-      @include MX.Flexbox(flex, column nowrap, center, space-around);
-    }
-  }
-  & .section:nth-child(4) {
-    background-color: var(--c_green400);
-
-    & .article {
-      @include MX.Flexbox(flex, column nowrap, center, space-around);
-    }
-  }
-  & .section:last-child {
-    min-height: 60vh;
-
-    & .article {
-      height: 100%;
-
-      @include MX.Flexbox(flex, column nowrap, center, space-around);
-
-      & .title {
-        color: var(--c_white);
+        @include MX.Flexbox(flex, column nowrap, center, space-evenly);
       }
-      & .description {
-        color: var(--c_grey400);
+    }
+
+    &:nth-child(2) {
+      min-height: 75vh;
+
+      & .article {
+        height: 100%;
+
+        @include MX.Flexbox(flex, column nowrap, center, space-between);
+      }
+    }
+
+    &:nth-child(3) {
+      min-height: 50vh;
+
+      background-color: var(--c_green400);
+
+      & .article {
+        @include MX.Flexbox(flex, row nowrap, center, space-around);
+      }
+    }
+
+    &:nth-child(4) {
+      min-height: 50vh;
+
+      background-color: var(--c_green400);
+
+      & .article {
+        @include MX.Flexbox(flex, row nowrap, center, space-around);
+      }
+    }
+
+    &:last-child {
+      min-height: 60vh;
+
+      & .article {
+        height: 100%;
+
+        @include MX.Flexbox(flex, row nowrap, center, space-around);
+
+        & .title {
+          color: var(--c_white);
+        }
+        & .description {
+          color: var(--c_grey400);
+        }
       }
     }
   }

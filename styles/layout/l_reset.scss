@@ -1,0 +1,52 @@
+/* Debug */
+* {
+  margin: 0;
+  padding: 0;
+
+  border: 1px dotted blue;
+}
+
+html {
+  font-size: clamp(100%, 0.75rem + 1.5vw, 25px);
+  font-family: var(--f_fontFamily);
+}
+
+/* Elementos base */
+h1 {
+  font-size: 2.25rem;
+}
+h2 {
+  font-size: 2rem;
+}
+h3 {
+  font-size: 1.75rem;
+}
+h4 {
+  font-size: 1.5rem;
+}
+h5 {
+  font-size: 1.25rem;
+}
+h6,
+p {
+  max-width: 42ch;
+  font-size: 1rem;
+}
+
+a {
+  font-size: 1rem;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  max-inline-size: 100%;
+  block-size: auto;
+  height: auto;
+  object-fit: cover;
+  object-position: 50% 50%;
+}
+
+button {
+  all: unset;
+}

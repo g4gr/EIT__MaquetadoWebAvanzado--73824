@@ -1,0 +1,14 @@
+.btn {
+  padding: 0.75rem 2rem;
+  border: 2px solid var(--c_green400);
+  border-radius: 0.75rem;
+  background-color: transparent;
+  color: var(--c_white);
+
+  text-transform: capitalize;
+}
+
+.btn--primary {
+  background-color: var(--c_green400);
+  color: var(--c_black);
+}

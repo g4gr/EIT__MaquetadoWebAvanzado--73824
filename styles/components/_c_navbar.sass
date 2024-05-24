@@ -9,37 +9,34 @@
 
   @include MX.Flexbox(flex, row wrap, center, space-between)
 
-  & .navbar__logo 
+  &__logo 
     display: inline-flex
     align-items: center
     gap: 0.5rem
 
-    container: navbar__logo / inline-size
-
     color: var(--c_white)
 
-  & .navbar__menu 
+  &__menu 
     display: flex
     gap: 1rem
 
     color: var(--c_grey400)
 
-    & .navbar__menu--item 
+    &--item 
       list-style-type: none
 
-      & .navbar__menu--item--link 
+      &--link 
         text-decoration: none
+  
+  &__buttons
+    @import '../components/_c_button.scss'
 
 
 @container navbar ( max-width: 768px ) 
   .Header .navbar 
-    & .navbar__menu 
-      & .navbar__menu--item 
-        & .navbar__menu--item--link 
+    &__menu 
+      &--item 
+        &--link 
           color: red
 
 
-@container navbar__logo ( max-width: 768px ) 
-  .navbar__logo 
-    & img 
-      scale: 1
