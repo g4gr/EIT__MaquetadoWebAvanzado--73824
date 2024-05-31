@@ -128,3 +128,10 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+
+
+# ---- SASS ----
+.sass-cache/
+*.css.map
+*.sass.map
+*.scss.map
