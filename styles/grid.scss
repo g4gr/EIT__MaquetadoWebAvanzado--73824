@@ -13,8 +13,6 @@ $Grid_row--Footer: 75vh;
 $Grid_columns: 12;
 $Grid_column: 1fr;
 
-$Grid_gap : 5px ;
-
 $Grid_template_rows: $Grid_row--Header $Grid_row--Main $Grid_row--Footer;
 $Grid_template_columns: repeat($Grid_columns, $Grid_column);
 
