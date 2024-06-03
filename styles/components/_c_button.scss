@@ -12,3 +12,9 @@
   background-color: var(--c_green400);
   color: var(--c_black);
 }
+
+.btn--secundary {
+	background-color : var( --c_blue500 );
+	color : var(  --c_white );
+	border : 2px solid var( --c_blue300 );
+}
